@@ -22,7 +22,7 @@ const Footer = ({ hideBGCOLOR }) => {
           <div className="col-lg-4">
             <div className="item md-mb50">
               <div className="title">
-                <h5>Contact Us</h5>
+                <h5>Contacto</h5>
               </div>
               <ul>
                 <li>
@@ -103,7 +103,7 @@ const Footer = ({ hideBGCOLOR }) => {
               <div className="copy-right">
                 <p>
                   © 2023, R&R Servicios mecanizados. Hecho con pasion por{" "}
-                  <Link href=" https://srb-dev.online/">
+                  <Link href="https://www.imaginebig.dev/">
                     <a target="_blank" style={{ color: "#9A15BF" }}>
                       Imagine Big
                     </a>

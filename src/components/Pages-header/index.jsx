@@ -8,7 +8,12 @@ const PagesHeader = () => {
         <div className="row justify-content-center">
           <div className="col-lg-10">
             <div className="img">
-              <img src="/img/slid/about.jpg" alt="" />
+              <img className="image-full" src="/img/slid/about.jpg" alt="" />
+              <img
+                className="image-responsive"
+                src="/img/slid/about-responsive.jpg"
+                alt=""
+              />
             </div>
           </div>
         </div>

@@ -4752,7 +4752,7 @@ span:hover {
   right: 120px;
   bottom: 0;
   left: -300px;
-  background: #f5f5f5;
+  background: #16375f;
   z-index: -1;
 }
 
@@ -4825,6 +4825,9 @@ span:hover {
 }
 
 /* ====================== [ End services ] ====================== */
+.image-responsive {
+  display: none;
+}
 /* ====================== [ Start brands ] ====================== */
 .clients .brands:hover img {
   -webkit-transform: scale(0);
@@ -8478,6 +8481,12 @@ footer .item .copy-right p a {
 }
 
 @media screen and (max-width: 767px) {
+  .image-responsive {
+    display: block;
+  }
+  .image-full {
+    display: none;
+  }
   .sm-mb10 {
     margin-bottom: 10px;
   }
@@ -8713,7 +8722,7 @@ footer .item .copy-right p a {
   }
 
   .pages-header {
-    padding: 120px 0 80px;
+    /* padding: 120px 0 80px; */
     overflow-x: hidden;
   }
 
