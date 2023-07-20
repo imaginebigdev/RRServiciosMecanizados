@@ -3,7 +3,7 @@ import React from "react";
 import ClientsData from "../../data/sections/clients.json";
 import Split from "../Split";
 
-const Clients = ({theme}) => {
+const Clients = ({ theme }) => {
   var first = ClientsData.slice(0, ClientsData.length / 2);
   var second = ClientsData.slice(4, ClientsData.length);
   return (
@@ -12,13 +12,10 @@ const Clients = ({theme}) => {
         <div className="row">
           <div className="col-lg-4 valign md-mb50">
             <div className="sec-head mb-0">
-              <h6 className="wow fadeIn" data-wow-delay=".5s">
-                Best Features
-              </h6>
-              <h3 className="wow mb-20 color-font">Our Clients</h3>
+              <h3 className="wow mb-20 color-font">Nuestros Clientes</h3>
               <p>
-                Our area of practice is quite wide: design, graphics, branding,
-                development.
+                Algunas de las empresas que confían en R&R Servicios
+                Mecanizados:
               </p>
             </div>
           </div>

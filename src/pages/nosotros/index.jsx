@@ -1,22 +1,24 @@
 import React from "react";
 import Navbar from "../../components/Navbar/navbar";
-import Intro2 from "../../components/Intro2/intro2";
 import Services from "../../components/Services/services";
-import Video2 from "../../components/Video2/video2";
+import VideoWithTestimonials from "../../components/Video-with-testimonials/video-with-testimonials";
+import SkillsCircle from "../../components/Skills-circle/skills-circle";
+import Clients from "../../components/Clients/clients";
 import CallToAction from "../../components/Call-to-action/call-to-action";
 import Footer from "../../components/Footer/footer";
-import DarkTheme from "../../layouts/Dark";
-import Portfolio from "../../components/Portfolio/portfolio";
-import FullTestimonials from "../../components/Full-testimonials/full-testimonials";
-import Team2 from "../../components/Team2/team2";
-import Blogs2 from "../../components/blogs/Blogs2/blogs2";
+import PagesHeader from "../../components/Pages-header";
+import AboutIntro from "../../components/About-intro";
+import LightTheme from "../../layouts/Light";
+import Team from "../../components/Team/team";
+import MinimalArea from "../../components/Minimal-Area/minimal-area";
 
-const Homepage2 = () => {
+const About = () => {
   const navbarRef = React.useRef(null);
   const logoRef = React.useRef(null);
 
   React.useEffect(() => {
-    var navbar = navbarRef.current;
+    var navbar = navbarRef.current,
+      logo = logoRef.current;
     if (window.pageYOffset > 300) {
       navbar.classList.add("nav-scroll");
     } else {
@@ -31,19 +33,16 @@ const Homepage2 = () => {
     });
   }, [navbarRef]);
   return (
-    <DarkTheme>
-      <Navbar nr={navbarRef} lr={logoRef} />
-      <Intro2 />
-      <Services style="4item" />
-      <Video2 />
-      <Portfolio grid={3} filterPosition="center" />
-      <FullTestimonials noPadding />
-      <Team2 />
-      <Blogs2 />
+    <LightTheme>
+      <Navbar nr={navbarRef} lr={logoRef} theme="themeL" />
+      <PagesHeader />
+      <AboutIntro />
+      <MinimalArea />
+      <Team />
       <CallToAction />
       <Footer />
-    </DarkTheme>
+    </LightTheme>
   );
 };
 
-export default Homepage2;
+export default About;

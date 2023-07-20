@@ -9,10 +9,13 @@ import VideoWithTestimonials from "../../components/Video-with-testimonials/vide
 import SkillsCircle from "../../components/Skills-circle/skills-circle";
 import Clients from "../../components/Clients/clients";
 import Blogs1 from "../../components/blogs/Blogs1/blogs1";
-import appData from '../../data/app.json'
+import appData from "../../data/app.json";
 import CallToAction from "../../components/Call-to-action/call-to-action";
 import Footer from "../../components/Footer/footer";
 import LightTheme from "../../layouts/Light";
+import AboutUs4 from "../../components/About-us4/about-us4";
+import MinimalArea2 from "../../components/Minimal-Area2/minimal-area2";
+import ContactArch from "../../components/Contact-arch/contact-arch";
 
 const Homepage1 = () => {
   const fixedSlider = React.useRef(null);
@@ -28,7 +31,6 @@ const Homepage1 = () => {
       if (MainContent.current) {
         MainContent.current.style.marginTop = slidHeight + "px";
       }
-      
     }, 1000);
     var navbar = navbarRef.current,
       logo = logoRef.current;
@@ -53,13 +55,10 @@ const Homepage1 = () => {
       <IntroWithSlider sliderRef={fixedSlider} />
       <div ref={MainContent} className="main-content">
         <AboutUs />
-        <Services />
+        <MinimalArea2 />
         <Works />
-        <Numbers />
-        <VideoWithTestimonials />
-        <SkillsCircle theme="light" />
+
         <Clients theme="light" />
-        <Blogs1 />
         <CallToAction />
         <Footer />
       </div>
