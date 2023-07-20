@@ -57,7 +57,6 @@ const Homepage1 = () => {
         <AboutUs />
         <MinimalArea2 />
         <Works />
-
         <Clients theme="light" />
         <CallToAction />
         <Footer />

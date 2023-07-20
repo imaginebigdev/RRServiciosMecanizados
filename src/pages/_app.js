@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Vie</title>
+        <title>R&R Servicios Mecanizados</title>
         <link rel="icon" href="/img/favicon.ico" />
       </Head>
       <Cursor />

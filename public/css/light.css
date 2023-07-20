@@ -1851,7 +1851,7 @@ span:hover {
 }
 
 .navbar .logo {
-  width: 50px;
+  width: 200px;
 }
 
 .nav-scroll {
@@ -4869,7 +4869,7 @@ span:hover {
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
-  max-width: 75px;
+  max-width: 160px;
   margin: auto;
 }
 
@@ -8186,7 +8186,7 @@ footer .item .copy-right p a {
 
   .navbar .logo {
     margin-left: 15px;
-    width: 50px;
+    width: 200px;
   }
 
   .nav-scroll .icon-bar,
@@ -8576,7 +8576,7 @@ footer .item .copy-right p a {
   }
 
   .navbar .logo {
-    width: 40px;
+    width: 180px;
   }
 
   .hamenu .menu-links .main-menu > li {
