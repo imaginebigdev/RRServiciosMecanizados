@@ -25,29 +25,30 @@ const MinimalArea2 = () => {
           </div>
           <div className="col-lg-6 valign">
             <div className="content">
-              <h4 className="color-font">Dream. Innovate. Implement.</h4>
-              <Split>
-                <p className="wow txt words chars splitting" data-splitting>
-                  Our creative Ad agency is ranked among the finest in the US.
-                  We cultivate smart ideas for start-ups and seasoned players.
-                  By adhering to industry standards, we create some stunning
-                  portfolios. Company branding redefines.
-                </p>
-              </Split>
+              <h4 className="color-font">
+                ¿Qué ofrece R&R Servicios Mecanizados?
+              </h4>
+
+              <p className="wow txt words chars splitting" data-splitting>
+                R&R Servicios Mecanizados ofrece entre otros, el servicio de
+                fabricación de piezas bajo plano o muestra. Soldaduras de alta
+                presión con personal certificado para la tarea.
+              </p>
+
               <ul>
-                <li className="wow fadeInUp" data-wow-delay=".2s">
-                  We provide free initial consultation and support.
-                </li>
-                <li className="wow fadeInUp" data-wow-delay=".4s">
-                  We work with some of the most successful businesses.
-                </li>
+                <li>MECANIZADOS</li>
+                <li>METALURGICA</li>
+                <li>SOLDADURAS ESPECIALES</li>
+                <li>SERVICIOS PETROLEROS</li>
+                <li>MONTAJES HASTA 50 KG</li>
+                <li>HIDRAULICA</li>
               </ul>
               <Link href={`/about/about-dark`}>
                 <a
                   className="butn bord curve mt-40 wow fadeInUp"
                   data-wow-delay=".8s"
                 >
-                  <span>Discover</span>
+                  <span>Más información</span>
                 </a>
               </Link>
 

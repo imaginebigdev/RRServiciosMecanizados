@@ -1,9 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import appData from "../../data/app.json";
 
 const Footer = ({ hideBGCOLOR }) => {
+  const [copiedMessage, setCopiedMessage] = useState(null);
+  const copyToClipboard = (text, type) => {
+    const el = document.createElement("textarea");
+    el.value = text;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand("copy");
+    document.body.removeChild(el);
+    setCopiedMessage(`¡${type} Copiado!`);
+    setTimeout(() => setCopiedMessage(null), 1500);
+  };
   return (
     <footer className={`${!hideBGCOLOR ? "sub-bg" : ""}`}>
       <div className="container">
@@ -11,123 +22,91 @@ const Footer = ({ hideBGCOLOR }) => {
           <div className="col-lg-4">
             <div className="item md-mb50">
               <div className="title">
-                <h5>Contact Us</h5>
+                <h5>Contacto</h5>
               </div>
               <ul>
                 <li>
                   <span className="icon pe-7s-map-marker"></span>
                   <div className="cont">
-                    <h6>Officeal Address</h6>
-                    <p>504 White St . Dawsonville, GA 30534 , New York</p>
+                    <h6>Dirección</h6>
+                    <p>
+                      Italia N°40 (Eva Perón e Italia) – (8328) Allen, Río Negro
+                    </p>
                   </div>
                 </li>
                 <li>
                   <span className="icon pe-7s-mail"></span>
                   <div className="cont">
-                    <h6>Email Us</h6>
-                    <p>support@gmail.com</p>
+                    <h6>Email</h6>
+                    <p>rr.metalmecanica2015@gmail.com</p>
                   </div>
                 </li>
                 <li>
                   <span className="icon pe-7s-call"></span>
                   <div className="cont">
-                    <h6>Call Us</h6>
-                    <p>+87986451666</p>
+                    <h6>Teléfono</h6>
+                    <p>298 486 9796</p>
                   </div>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="col-lg-4">
-            <div className="item md-mb50">
-              <div className="title">
-                <h5>Recent News</h5>
-              </div>
-              <ul>
-                <li>
-                  <div className="img">
-                    <Link href="/blog-details/blog-details-dark">
-                      <a>
-                        <img src="/img/blog/1.jpg" alt="" />
-                      </a>
-                    </Link>
-                  </div>
-                  <div className="sm-post">
-                    <Link href="/blog-details/blog-details-dark">
-                      <a>
-                        <p>
-                          The Start-Up Ultimate Guide to Make Your WordPress
-                          Journal.
-                        </p>
-                      </a>
-                    </Link>
-                    <Link href="/blog/blog-dark">
-                      <a>
-                        <span className="date">14 sep 2022</span>
-                      </a>
-                    </Link>
-                  </div>
-                </li>
-                <li>
-                  <div className="img">
-                    <Link href="/blog-details/blog-details-dark">
-                      <a>
-                        <img src="/img/blog/2.jpg" alt="" />
-                      </a>
-                    </Link>
-                  </div>
-                  <div className="sm-post">
-                    <Link href="/blog-details/blog-details-dark">
-                      <a>
-                        <p>
-                          The Start-Up Ultimate Guide to Make Your WordPress
-                          Journal.
-                        </p>
-                      </a>
-                    </Link>
-                    <Link href="/blog/blog-dark">
-                      <a>
-                        <span className="date">14 sep 2022</span>
-                      </a>
-                    </Link>
-                  </div>
-                </li>
-                <li>
-                  <div className="subscribe">
-                    <input type="text" placeholder="Type Your Email" />
-                    <span className="subs pe-7s-paper-plane"></span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <div className="col-lg-4"></div>
           <div className="col-lg-4">
             <div className="item">
               <div className="logo">
                 <img src={appData.lightLogo} alt="" />
               </div>
               <div className="social">
-                <a href="#0">
+                <a
+                  href="https://www.facebook.com/RRTorneria/?locale=es_LA"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <i className="fab fa-facebook-f"></i>
                 </a>
-                <a href="#0">
-                  <i className="fab fa-twitter"></i>
-                </a>
-                <a href="#0">
+                <a
+                  href="https://www.instagram.com/rr.metalmecanica/?hl=en"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <i className="fab fa-instagram"></i>
                 </a>
-                <a href="#0">
-                  <i className="fab fa-youtube"></i>
+                <a>
+                  <i
+                    style={{ cursor: "pointer" }}
+                    className="fa fa-envelope"
+                    onClick={() =>
+                      copyToClipboard("rr.metalmecanica2015@gmail.com", "Email")
+                    }
+                  ></i>
+                  {copiedMessage && (
+                    <div className="copied-message">
+                      <p>{copiedMessage}</p>
+                    </div>
+                  )}
+                </a>
+                <a>
+                  <i
+                    style={{ cursor: "pointer" }}
+                    className="fa fa-phone"
+                    onClick={() => copyToClipboard("2984869796", "Teléfono")}
+                  ></i>
+                  {copiedMessage && (
+                    <div className="copied-message">
+                      <p>{copiedMessage}</p>
+                    </div>
+                  )}
                 </a>
               </div>
+
               <div className="copy-right">
                 <p>
-                  © 2022, Vie Template. Made with passion by
-                  <Link
-                    href="https://themeforest.net/user/themescamp/portfolio"
-                    
-                  >
-                    <a target="_blank">ThemesCamp</a>
+                  © 2023, R&R Servicios mecanizados. Hecho con pasion por{" "}
+                  <Link href="https://www.imaginebig.dev/">
+                    <a target="_blank" style={{ color: "#9A15BF" }}>
+                      Imagine Big
+                    </a>
                   </Link>
                   .
                 </p>

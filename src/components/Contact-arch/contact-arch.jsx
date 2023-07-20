@@ -17,7 +17,6 @@ const ContactArch = () => {
     <section
       id="contact-arch"
       className="contact-sec style2 section-padding position-re bg-img"
-      style={{ backgroundImage: "url(/img/patrn1.png)" }}
     >
       <div className="container">
         <div className="row justify-content-center">

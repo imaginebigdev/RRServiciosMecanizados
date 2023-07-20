@@ -22,6 +22,18 @@ const IntroWithSlider = ({ sliderRef }) => {
       setLoad(false);
     }, 1000);
   }, []);
+  const [copiedMessage, setCopiedMessage] = React.useState(null);
+
+  const copyToClipboard = (text, type) => {
+    const el = document.createElement("textarea");
+    el.value = text;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand("copy");
+    document.body.removeChild(el);
+    setCopiedMessage(`¡${type} Copiado!`);
+    setTimeout(() => setCopiedMessage(null), 1500);
+  };
 
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
@@ -77,31 +89,26 @@ const IntroWithSlider = ({ sliderRef }) => {
             className="swiper-wrapper"
             slidesPerView={1}
           >
-            {introData.map((slide) => (
-              <SwiperSlide key={slide.id} className="swiper-slide">
-                <div
-                  className="bg-img valign"
-                  style={{ backgroundImage: `url(${slide.image})` }}
-                  data-overlay-dark="6"
-                >
-                  <div className="container">
-                    <div className="row justify-content-center">
-                      <div className="col-lg-8 col-md-10">
-                        <div className="caption center mt-30">
-                          <h1 className="color-font">{slide.title}</h1>
-                          {slide?.content && <p>{slide.content}</p>}
-                          <Link href="/about/about-dark">
-                            <a className="butn bord curve mt-30">
-                              <span>Look More</span>
-                            </a>
-                          </Link>
-                        </div>
+            <SwiperSlide className="swiper-slide">
+              <div
+                className="bg-img valign"
+                style={{ backgroundImage: `url(/img/slid/02.jpg)` }}
+                data-overlay-dark="6"
+              >
+                <div className="container">
+                  <div className="row justify-content-center">
+                    <div className="col-lg-8 col-md-10">
+                      <div className="caption center mt-30">
+                        <h1 style={{ color: "#c80818" }}>
+                          R&R Servicios Mecanizados
+                        </h1>
+                        <p></p>
                       </div>
                     </div>
                   </div>
                 </div>
-              </SwiperSlide>
-            ))}
+              </div>
+            </SwiperSlide>
           </Swiper>
         ) : null}
         <div className="setone setwo">
@@ -121,17 +128,45 @@ const IntroWithSlider = ({ sliderRef }) => {
         <div ref={paginationRef} className="swiper-pagination top botm"></div>
 
         <div className="social-icon">
-          <a href="#0">
+          <a
+            href="https://www.facebook.com/RRTorneria/?locale=es_LA"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className="fab fa-facebook-f"></i>
           </a>
-          <a href="#0">
-            <i className="fab fa-twitter"></i>
+          <a
+            href="https://www.instagram.com/rr.metalmecanica/?hl=en"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="fab fa-instagram"></i>
           </a>
-          <a href="#0">
-            <i className="fab fa-behance"></i>
+          <a>
+            <i
+              style={{ cursor: "pointer" }}
+              className="fa fa-envelope"
+              onClick={() =>
+                copyToClipboard("rr.metalmecanica2015@gmail.com", "Email")
+              }
+            ></i>
+            {copiedMessage && (
+              <div className="copied-message-intro">
+                <p>{copiedMessage}</p>
+              </div>
+            )}
           </a>
-          <a href="#0">
-            <i className="fab fa-pinterest-p"></i>
+          <a>
+            <i
+              style={{ cursor: "pointer" }}
+              className="fa fa-phone"
+              onClick={() => copyToClipboard("2984869796", "Teléfono")}
+            ></i>
+            {copiedMessage && (
+              <div className="copied-message-intro">
+                <p>{copiedMessage}</p>
+              </div>
+            )}
           </a>
         </div>
       </div>

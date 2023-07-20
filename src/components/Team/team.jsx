@@ -6,9 +6,9 @@ import teamsDate from "../../data/sections/team.json";
 
 const Team = () => {
   React.useEffect(() => {
-    teamSkillsProgress()
+    teamSkillsProgress();
     setTimeout(() => {
-      tooltipEffect()
+      tooltipEffect();
     }, 1000);
   }, []);
   return (
@@ -17,29 +17,40 @@ const Team = () => {
         <div className="row">
           <div className="col-lg-5 valign">
             <div className="content wow fadeInUp md-mb30" data-wow-delay=".5s">
-              <div className="sub-title">
-                <h6>Our Staff</h6>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
               <h3 className="co-tit mb-15">
-                We help to create visual strategies.
+                ¿Por qué R&R Servicios Mecanizados?
               </h3>
-              <p>
-                We are Vie. We create award-winning websites, remarkable brands
-                and cutting-edge apps.Nullam imperdie.
-              </p>
-              <div className="skills-box mt-40">
-                {teamsDate.skills.map((skill) => (
-                  <div className="skill-item" key={skill.id}>
-                    <h6 className="custom-font">{skill.text}</h6>
-                    <div className="skill-progress">
-                      <div className="progres" data-value={skill.value}></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <ul className="fz-18">
+                <li>
+                  <span className="color-font" style={{ height: "100%" }}>
+                    <i className="fa fa-circle"></i>
+                  </span>{" "}
+                  Somos una empresa joven con ansias de crecer tomando como eje
+                  fundamental el cumplimiento, la responsabilidad en el servicio
+                  y la satisfacción de nuestros clientes.
+                </li>
+                <br />
+                <li>
+                  <span className="color-font">
+                    <i className="fa fa-circle"></i>
+                  </span>{" "}
+                  Contamos con tecnología adecuada al servicio que ofrecemos.{" "}
+                </li>
+                <br />
+                <li>
+                  <span className="color-font">
+                    <i className="fa fa-circle"></i>
+                  </span>{" "}
+                  Enfoque profesional y especializado de los servicios.
+                </li>
+                <br />
+                <li>
+                  <span className="color-font">
+                    <i className="fa fa-circle"></i>
+                  </span>{" "}
+                  Rapidez en respuesta a sus necesidades
+                </li>
+              </ul>
             </div>
           </div>
           <div className="col-lg-6 offset-lg-1">
@@ -55,8 +66,6 @@ const Team = () => {
                               ? "mb-30"
                               : null
                           }`}
-                          data-tooltip-tit={team.title}
-                          data-tooltip-sub={team.sub}
                         >
                           <img src={team.image} alt="" className="imago wow" />
                         </div>
@@ -74,8 +83,6 @@ const Team = () => {
                               ? "mb-30"
                               : null
                           }`}
-                          data-tooltip-tit={team.title}
-                          data-tooltip-sub={team.sub}
                         >
                           <img src={team.image} alt="" className="imago wow" />
                         </div>
