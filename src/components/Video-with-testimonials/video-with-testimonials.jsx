@@ -20,7 +20,7 @@ const VideoWithTestimonials = () => {
     slidesToScroll: 1,
   };
   return (
-    <section className="block-sec">
+    <section className="block-sec mt-100 mb-100">
       <div
         className="background bg-img pt-100 pb-0 parallaxie"
         style={{ backgroundImage: `url(/img/bg-vid.jpg)` }}
@@ -30,13 +30,13 @@ const VideoWithTestimonials = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="vid-area">
-                <span className="text">Watch Video</span>
+                <span className="text">Mirar video</span>
                 <div className="vid-icon">
                   {typeof window !== "undefined" && (
                     <ModalVideo
-                      channel="vimeo"
+                      channel="youtube"
                       isOpen={isOpen}
-                      videoId="127203262"
+                      videoId="2JD-x4yCk9M"
                       onClose={() => setOpen(false)}
                     />
                   )}
@@ -60,10 +60,10 @@ const VideoWithTestimonials = () => {
               <div className="testim-box">
                 <div className="head-box">
                   <h6 className="wow fadeIn" data-wow-delay=".5s">
-                    Our Clients
+                    Servicios
                   </h6>
                   <h4 className="wow fadeInLeft" data-wow-delay=".5s">
-                    What Client&apos;s Say?
+                    ¿De que manera lo logramos?
                   </h4>
                 </div>
                 <Slider
@@ -72,70 +72,41 @@ const VideoWithTestimonials = () => {
                   data-wow-delay=".5s"
                 >
                   <div className="item">
+                    <h6>Recursos Productivos:</h6>
+
                     <p>
-                      Nulla metus metus ullamcorper vel tincidunt sed euismod
-                      nibh volutpat velit class aptent taciti sociosqu ad
-                      litora.
+                      Tornos paralelos, Fresadora, Soldadoras, rectificadoras de
+                      superficies planas. Instrumentos de Control Dimensional:
+                      micrómetros, alesómetros, calibres, telescopines, calibres
+                      de rosca, instrumentos digitales. Herramientas auxiliares:
+                      amoladoras, agujereadoras, serrucho mecánico, entre otras.
+                      De esta manera aseguramos la mejor calidad de nuestro
+                      servicio.
                     </p>
-                    <div className="info">
-                      <div className="img">
-                        <div className="img-box">
-                          <img src="/img/clients/1.jpg" alt="" />
-                        </div>
-                      </div>
-                      <div className="cont">
-                        <div className="author">
-                          <h6 className="author-name ">Alex Regelman</h6>
-                          <span className="author-details">
-                            Co-founder, Colabrio
-                          </span>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                   <div className="item">
+                    <h6>Recursos Técnicos:</h6>
                     <p>
-                      Nulla metus metus ullamcorper vel tincidunt sed euismod
-                      nibh volutpat velit class aptent taciti sociosqu ad
-                      litora.
+                      Cooperación permanente con nuestros clientes desde la
+                      concepción del proyecto, acompañándolos y asesorándolos en
+                      cada paso, aportando los conocimientos que la experiencia
+                      de nuestros colaboradores posee. Desarrollo de utillaje
+                      propio y dispositivos para todos los procesos de
+                      fabricación. Piezas especiales. Tecnología CAM para
+                      documentar desarrollos y permitir eficiencia en los
+                      trabajos
                     </p>
-                    <div className="info">
-                      <div className="img">
-                        <div className="img-box">
-                          <img src="/img/clients/2.jpg" alt="" />
-                        </div>
-                      </div>
-                      <div className="cont">
-                        <div className="author">
-                          <h6 className="author-name ">Alex Regelman</h6>
-                          <span className="author-details">
-                            Co-founder, Colabrio
-                          </span>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                   <div className="item">
+                    <h6>Recursos humanos:</h6>
                     <p>
-                      Nulla metus metus ullamcorper vel tincidunt sed euismod
-                      nibh volutpat velit class aptent taciti sociosqu ad
-                      litora.
+                      En todos los casos el personal cuenta con la debida
+                      capacitación y calificación necesaria para tarea que
+                      realiza. Constantemente se desarrollan oportunidades de
+                      capacitación y motivación, invitando a los colaboradores a
+                      ser dueños de un deseo de superación constante, que se ve
+                      reflejado en forma directa en nuestro servicio.
                     </p>
-                    <div className="info">
-                      <div className="img">
-                        <div className="img-box">
-                          <img src="/img/clients/3.jpg" alt="" />
-                        </div>
-                      </div>
-                      <div className="cont">
-                        <div className="author">
-                          <h6 className="author-name ">Alex Regelman</h6>
-                          <span className="author-details">
-                            Co-founder, Colabrio
-                          </span>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </Slider>
               </div>

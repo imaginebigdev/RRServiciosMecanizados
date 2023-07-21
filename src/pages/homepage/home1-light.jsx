@@ -58,6 +58,7 @@ const Homepage1 = () => {
         <MinimalArea2 />
         <Works />
         <Clients theme="light" />
+        <VideoWithTestimonials />
         <CallToAction />
         <Footer />
       </div>
