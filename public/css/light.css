@@ -6749,17 +6749,7 @@ span:hover {
   top: -10px;
   right: -10px;
   bottom: -10px;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#c80818),
-    color-stop(#c471ed),
-    to(#f64f59)
-  );
-  background: -webkit-linear-gradient(left, #c80818, #c471ed, #f64f59);
-  background: -o-linear-gradient(left, #c80818, #c471ed, #f64f59);
-  background: linear-gradient(to right, #c80818, #c471ed, #f64f59);
+  background: #c80818;
   z-index: -4;
 }
 
