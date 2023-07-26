@@ -7870,6 +7870,25 @@ span:hover {
   margin-top: 5px;
 }
 
+.services-flex {
+  font-size: 80px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.video-background video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 /* ====================== [ End Numbers & Counter  ] ====================== */
 /* ====================== [ Start contact ] ====================== */
 .contact-sec .form .form-group {

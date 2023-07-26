@@ -89,43 +89,20 @@ const IntroWithSlider = ({ sliderRef }) => {
             className="swiper-wrapper"
             slidesPerView={1}
           >
-            <SwiperSlide className="swiper-slide">
-              <div
-                className="bg-img valign"
-                style={{ backgroundImage: `url(/img/slid/02.jpg)` }}
-                data-overlay-dark="6"
-              >
-                <div className="container">
-                  <div className="row justify-content-center">
-                    <div className="col-lg-8 col-md-10">
-                      <div className="caption center mt-30">
-                        <h1 style={{ color: "#c80818" }}>
-                          R&R Servicios Mecanizados
-                        </h1>
-                        <p></p>
-                      </div>
-                    </div>
-                  </div>
+            {introData.map((slide) => (
+              <SwiperSlide key={slide.id} className="swiper-slide">
+                <div className="video-background">
+                  <video
+                    src="/videos/videoryr.mp4"
+                    autoPlay={true}
+                    loop={true}
+                    muted={true}
+                  ></video>
                 </div>
-              </div>
-            </SwiperSlide>
+              </SwiperSlide>
+            ))}
           </Swiper>
         ) : null}
-        <div className="setone setwo">
-          <div
-            ref={navigationNextRef}
-            className="swiper-button-next swiper-nav-ctrl next-ctrl cursor-pointer"
-          >
-            <i className="fas fa-chevron-right"></i>
-          </div>
-          <div
-            ref={navigationPrevRef}
-            className="swiper-button-prev swiper-nav-ctrl prev-ctrl cursor-pointer"
-          >
-            <i className="fas fa-chevron-left"></i>
-          </div>
-        </div>
-        <div ref={paginationRef} className="swiper-pagination top botm"></div>
 
         <div className="social-icon">
           <a
