@@ -8046,11 +8046,11 @@ footer .item li .subscribe .subs {
 }
 
 footer .item .logo {
-  margin-bottom: 50px;
+  margin-bottom: 150px;
 }
 
 footer .item .logo img {
-  width: 50px;
+  width: 150px;
 }
 
 footer .item .social a {
@@ -8610,7 +8610,7 @@ footer .item .copy-right p a {
   }
 
   .topnav .logo {
-    width: 40px;
+    width: 140px;
   }
 
   .btn-curve {

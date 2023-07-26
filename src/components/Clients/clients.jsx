@@ -46,9 +46,11 @@ const Clients = ({ theme }) => {
                         )}
                         <Split>
                           <a
-                            href="#0"
+                            href={item.url2}
                             className="link words chars splitting"
                             data-splitting
+                            rel="noopener noreferrer"
+                            target="_blank"
                           >
                             {item.url}
                           </a>
@@ -96,9 +98,11 @@ const Clients = ({ theme }) => {
                         )}
                         <Split>
                           <a
-                            href="#0"
+                            href={item.url2}
                             className="link words chars splitting"
                             data-splitting
+                            rel="noopener noreferrer"
+                            target="_blank"
                           >
                             {item.url}
                           </a>
