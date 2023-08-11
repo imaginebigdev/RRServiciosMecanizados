@@ -45,7 +45,7 @@ const Footer = ({ hideBGCOLOR }) => {
                   <span className="icon pe-7s-call"></span>
                   <div className="cont">
                     <h6>Teléfono</h6>
-                    <p>298 486 9796</p>
+                    <p>+54 9 298 413 1468</p>
                   </div>
                 </li>
               </ul>
@@ -90,7 +90,9 @@ const Footer = ({ hideBGCOLOR }) => {
                   <i
                     style={{ cursor: "pointer" }}
                     className="fa fa-phone"
-                    onClick={() => copyToClipboard("2984869796", "Teléfono")}
+                    onClick={() =>
+                      copyToClipboard("+54 9 298 413 1468", "Teléfono")
+                    }
                   ></i>
                   {copiedMessage && (
                     <div className="copied-message">

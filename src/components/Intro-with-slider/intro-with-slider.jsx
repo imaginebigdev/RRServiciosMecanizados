@@ -137,7 +137,7 @@ const IntroWithSlider = ({ sliderRef }) => {
             <i
               style={{ cursor: "pointer" }}
               className="fa fa-phone"
-              onClick={() => copyToClipboard("2984869796", "Teléfono")}
+              onClick={() => copyToClipboard("+54 9 298 413 1468", "Teléfono")}
             ></i>
             {copiedMessage && (
               <div className="copied-message-intro">
