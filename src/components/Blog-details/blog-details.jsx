@@ -27,6 +27,38 @@ const BlogDetails = () => {
                       </h4>
                       <br />
                       <div className="spacial" id="logistic">
+                        <h6>TORQUEO Y VERIFICACIÓN DE TORQUES:</h6>
+                        <br />
+                        <h6>¿En qué Consiste el servicio de torque?</h6>
+                        <p>
+                          Es el torqueo de juntas apernadas realizado por
+                          personal calificado, más verificación del torque
+                          aplicado usando tecnologías patentadas (transductores)
+                          que permiten captura y registro de datos en tiempo
+                          real. Beneficios Trabajo realizado por personal
+                          capacitado y certificado por fabrica.
+                        </p>
+                        <ul>
+                          <li>
+                            <span>•</span> Cada una de las herramientas usadas
+                            son calibradas de forma individual antes de salir de
+                            nuestras instalaciones= confiabilidad
+                          </li>
+                          <li>
+                            <span>•</span> Nos enfocamos en el proceso de
+                            torque, haciendo siempre la mejor selección de
+                            herramientas conforme a la información entregada por
+                            el usuario.
+                          </li>
+                          <li>
+                            <span>•</span> El cliente recibe un informe final en
+                            donde está el registro del torque aplicado a cada
+                            tornillo= trazabilidad
+                          </li>
+                        </ul>
+                        <br />
+                      </div>
+                      <div className="spacial" id="logistic">
                         <h6>MECANIZADOS:</h6>
                         <br />
                         <ul>

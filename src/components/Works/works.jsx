@@ -81,7 +81,7 @@ const Works = () => {
                             backgroundImage: `url(${item.image})`,
                           }}
                         />
-                        <div className="cont">
+                        {/* <div className="cont">
                           <h6 className="color-font">
                             <a href="#0">{item.title}</a>
                           </h6>
@@ -92,7 +92,7 @@ const Works = () => {
                               {item.secTex}
                             </Link>
                           </h4>
-                        </div>
+                        </div> */}
                       </div>
                     </SwiperSlide>
                   ))}

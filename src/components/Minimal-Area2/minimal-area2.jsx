@@ -11,19 +11,10 @@ const MinimalArea2 = () => {
     }, 1000);
   }, []);
   return (
-    <section className="min-area">
+    <section className="min-area mt-50 mb-50">
       <div className="container">
         <div className="row">
-          <div className="col-lg-6">
-            <div className="img">
-              <img
-                className="thumparallax-down"
-                src="/img/min-area.jpg"
-                alt=""
-              />
-            </div>
-          </div>
-          <div className="col-lg-6 valign">
+          <div className="col-lg-6 valing">
             <div className="content">
               <h4 className="color-font">
                 ¿Qué ofrece R&R Servicios Mecanizados?
@@ -42,8 +33,9 @@ const MinimalArea2 = () => {
                 <li>SERVICIOS PETROLEROS</li>
                 <li>MONTAJES HASTA 50 KG</li>
                 <li>HIDRAULICA</li>
+                <li>SERVICIO DE TORQUEO Y VERIFICACIÓN DE TORQUES</li>
               </ul>
-              <Link href={`/about/about-dark`}>
+              <Link href={`/servicios`}>
                 <a
                   className="butn bord curve mt-40 wow fadeInUp"
                   data-wow-delay=".8s"
@@ -51,9 +43,11 @@ const MinimalArea2 = () => {
                   <span>Más información</span>
                 </a>
               </Link>
-
               <br />
             </div>
+          </div>
+          <div className="col-lg-6 ml-20">
+            <img className="thumparallax-down" src="/img/min-area.jpg" alt="" />
           </div>
         </div>
       </div>

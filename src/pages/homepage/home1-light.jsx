@@ -13,9 +13,9 @@ import appData from "../../data/app.json";
 import CallToAction from "../../components/Call-to-action/call-to-action";
 import Footer from "../../components/Footer/footer";
 import LightTheme from "../../layouts/Light";
-import AboutUs4 from "../../components/About-us4/about-us4";
 import MinimalArea2 from "../../components/Minimal-Area2/minimal-area2";
-import ContactArch from "../../components/Contact-arch/contact-arch";
+import AboutT from "../../components/Minimal-Area2/aboutTorque";
+import AboutTor from "../../components/Video-with-testimonials/aboutTor";
 
 const Homepage1 = () => {
   const fixedSlider = React.useRef(null);
@@ -55,6 +55,8 @@ const Homepage1 = () => {
       <IntroWithSlider sliderRef={fixedSlider} />
       <div ref={MainContent} className="main-content">
         <AboutUs />
+        <AboutTor />
+        <br></br>
         <MinimalArea2 />
         <Works />
         <Clients theme="light" />
